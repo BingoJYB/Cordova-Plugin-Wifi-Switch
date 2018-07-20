@@ -6,7 +6,7 @@ A plugin of switching on and off Wifi.
     
 Install the plugin
 
-    $ cordova plugin add https://github.com/don/cordova-plugin-hello.git
+    $ cordova plugin add https://github.com/BingoJYB/Cordova-Plugin-Wifi-Switch.git
     
 
 Edit `www/js/index.js` and add the following code inside `onDeviceReady`
@@ -21,6 +21,10 @@ Edit `www/js/index.js` and add the following code inside `onDeviceReady`
     }
 
     cordova.plugins.wifiswitch.switch(true, success, failure);
+    
+    or
+    
+    cordova.plugins.wifiswitch.switch(false, success, failure);
 ```
 
 Install Android platform

@@ -10,7 +10,7 @@
   <description>
     Cordova Plugin to switch wifi on and off.
   </description>
-  <keywords>cordova, wifi, switch</keywords>
+  <keywords>cordova, wifi, plugin</keywords>
   <engines>
     <engine name="cordova" version=">=6.4.0"/>
     <engine name="cordova-android" version=">=6.1.2"/>

@@ -9,7 +9,7 @@ Install the plugin
     $ cordova plugin add https://github.com/BingoJYB/Cordova-Plugin-Wifi-Switch.git
     
 
-Edit `www/js/index.js` and add the following code inside `onDeviceReady`
+Add the following code
 
 ```js
     var success = function(message) {

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        id="cordova-plugin-wifi-switch"
+        version="1.0.0">
+
+  <name>cordova-plugin-wifi-switch</name>
+  <author>BingoJYB</author>
+  <description>
+    Cordova Plugin to switch wifi on and off.
+  </description>
+  <keywords>cordova, wifi, switch</keywords>
+  <engines>
+    <engine name="cordova" version=">=6.4.0"/>
+    <engine name="cordova-android" version=">=6.1.2"/>
+  </engines>
+
+  <!-- js -->
+  <js-module src="www/wifiswitch.js" name="WifiSwitch">
+    <clobbers target="cordova.plugins.wifiswitch"/>
+  </js-module>
+
+  <!-- android -->
+  <platform name="android">
+    <config-file target="res/xml/config.xml" parent="/*">
+      <feature name="WifiSwitch">
+        <param name="android-package" value="android.plugin.WifiSwitch"/>
+      </feature>
+    </config-file>
+    <config-file target="AndroidManifest.xml" parent="/*">
+      <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+      <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    </config-file>
+    <source-file src="src/android/WifiSwitch.java"
+                 target-dir="src/android/plugin/"/>
+  </platform>
+</plugin>

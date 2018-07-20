@@ -1,0 +1,23 @@
+{
+  "name": "cordova-plugin-wifi-switch",
+  "version": "0.1.0",
+  "description": "A plugin for wifi switching",
+  "cordova": {
+    "id": "cordova-plugin-wifi-switch",
+    "platforms": [
+      "android"
+    ]
+  },
+  "repository": {
+    "type": "git"
+  },
+  "keywords": [
+    "cordova",
+    "plugin",
+    "wifi",
+    "ecosystem:cordova",
+    "cordova-android"
+  ],
+  "author": "BingoJYB",
+  "license": "Apache-2"
+}

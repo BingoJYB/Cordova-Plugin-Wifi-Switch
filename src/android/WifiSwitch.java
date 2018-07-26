@@ -22,9 +22,16 @@ public class WifiSwitch extends CordovaPlugin {
 
     @Override
     public boolean execute(String action, JSONArray data, CallbackContext callbackContext) throws JSONException {
-        if (action.equals("switch")) {
+        if (action.equals("setWifiEnabled")) {
             boolean state = data.getBoolean(0);
             wifiManager.setWifiEnabled(state);
+            return true;
+        }
+        else if (action.equals("isWifiEnabled")) {
+            boolean isEnabled = wifiManager.isWifiEnabled();
+            PluginResult result = new PluginResult(PluginResult.Status.OK, isEnabled);
+            result.setKeepCallback(true);
+            callbackContext.sendPluginResult(result);
             return true;
         }
         else {

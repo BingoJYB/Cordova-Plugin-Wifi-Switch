@@ -1,7 +1,7 @@
 var exec = require('cordova/exec');
 
 module.exports = {
-    switch: function (state, successCallback, errorCallback) {
+    setWifiEnabled: function (state, successCallback, errorCallback) {
         cordova.exec(successCallback, errorCallback, "WifiSwitch", "setWifiEnabled", [state]);
     },
 
